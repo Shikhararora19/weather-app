@@ -83,6 +83,10 @@ function getWeatherEmoji(weatherID){
             return "🌫️";
         case(weatherID === 800):
             return "☀️";
+        case(weatherID > 800):
+            return "☁️";
+        default:
+            return "🌞";
 
     }
 
