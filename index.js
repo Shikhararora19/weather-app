@@ -52,20 +52,39 @@ function displayWeatherInfo(data){
     tempDisplay.textContent = `${(temp - 273.15).toFixed(1)}°C`;
     humidityDisplay.textContent = `Humidity: ${humidity}%`;
     desDisplay.textContent = description;
+    weatherEmoji.textContent = getWeatherEmoji(id);
 
 
     cityDisplay.classList.add("cityDisplay");
     tempDisplay.classList.add("tempDisplay");
     humidityDisplay.classList.add("humidityDisplay");
     desDisplay.classList.add("desDisplay");
+    weatherEmoji.classList.add("weatherEmoji");
+    
 
     card.appendChild(cityDisplay);
     card.appendChild(tempDisplay);
     card.appendChild(humidityDisplay);
     card.appendChild(desDisplay);
+    card.appendChild(weatherEmoji);
 }
 
 function getWeatherEmoji(weatherID){
+    switch(true){
+        case(weatherID >= 200 && weatherID < 300):
+            return "⛈️";
+        case(weatherID >= 300 && weatherID < 400):
+            return "🌧️";
+        case(weatherID >= 500 && weatherID < 600):
+            return "🌧️";
+        case(weatherID >= 600 && weatherID < 700):
+            return "❄️";
+        case(weatherID >= 700 && weatherID < 800):
+            return "🌫️";
+        case(weatherID === 800):
+            return "☀️";
+
+    }
 
 }
 
