@@ -48,6 +48,10 @@ function displayWeatherInfo(data){
     const weatherEmoji = document.createElement("p");
     const desDisplay = document.createElement("p");
 
+    cityDisplay.textContent = city;
+
+    card.appendChild(cityDisplay);
+
 }
 
 function getWeatherEmoji(weatherID){
