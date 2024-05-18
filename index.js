@@ -49,9 +49,12 @@ function displayWeatherInfo(data){
     const desDisplay = document.createElement("p");
 
     cityDisplay.textContent = city;
+    tempDisplay.textContent = `${temp}°C`;
+    cityDisplay.classList.add("cityDisplay");
+    tempDisplay.classList.add("tempDisplay");
 
     card.appendChild(cityDisplay);
-
+    card.appendChild(tempDisplay);
 }
 
 function getWeatherEmoji(weatherID){
