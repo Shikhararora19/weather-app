@@ -49,7 +49,7 @@ function displayWeatherInfo(data){
     const desDisplay = document.createElement("p");
 
     cityDisplay.textContent = city;
-    tempDisplay.textContent = `${temp}°C`;
+    tempDisplay.textContent = `${(temp - 273.15).toFixed(1)}°C`;
     cityDisplay.classList.add("cityDisplay");
     tempDisplay.classList.add("tempDisplay");
 
