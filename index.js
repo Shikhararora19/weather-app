@@ -8,8 +8,8 @@ weatherForm.addEventListener("submit", (e) => {
 
     e.preventDefault();
     const city = cityInput.value;
-    if (city){
-    getWeatherData(city);
+    if(city){
+        getWeatherData(city);
     }
     else{
         displayError("Please enter a city name");
@@ -32,6 +32,12 @@ function getWeatherEmoji(weatherID){
 }
 
 function displayError(message){
+    const errorDisplay = document.createElement("p");
+    errorDisplay.textContent = message;
+    errorDisplay.classList.add("errorDisplay")
 
+    card.textContent = "";
+    card.style.display = "flex";
+    card.appendChild(errorDisplay);
 
 }
