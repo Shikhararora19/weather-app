@@ -1,4 +1,4 @@
-Link to the site: 
+Link to the site: https://shikhararora19.github.io/weather-app/
 ### Technical Points:
 1. **Technology Stack**: HTML, CSS, JavaScript.
 2. **API Integration**: Fetches weather data from a weather API for the selected city
